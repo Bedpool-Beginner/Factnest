@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Hormozi - FactNest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --text: #0d1117;
+      --card: #ffffffcc;
+      --accent: #6366f1;
+    }
+    [data-theme="dark"] {
+      --bg: #0d1117;
+      --text: #f5f5f5;
+      --card: #161b22cc;
+      --accent: #8b5cf6;
+    }
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      padding: 2rem;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    .toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--card);
+      border: 1px solid #ccc;
+      border-radius: 1rem;
+      padding: 0.5rem 1rem;
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 1rem;
+      display: block;
+      margin: 1rem auto;
+    }
+    p {
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .back {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      background: var(--card);
+      padding: 0.5rem 1rem;
+      border-radius: 0.75rem;
+      border: 1px solid var(--accent);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle" onclick="toggleTheme()">Toggle Mode</button>
+  <div class="container">
+    <a class="back" href="/">← Return to FactNest</a>
+    <h1>Alex Hormozi</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Alex_Hormozi.jpg/800px-Alex_Hormozi.jpg" alt="Alex Hormozi">
+    <p><strong>Alex Hormozi</strong> is a renowned entrepreneur, author, investor, and philanthropist best known for scaling businesses and teaching others how to build sustainable, profitable enterprises. Born in 1989, Hormozi has made a name for himself in the fitness and business education industries. He is the founder of Acquisition.com, a company that invests in and advises growing businesses.</p>
+
+    <p>Hormozi first made waves in the fitness world, building a chain of highly successful gyms and eventually transitioning into helping other gym owners increase their revenue through his company Gym Launch. Through this, he demonstrated a repeatable system for sales, lead generation, and operational excellence.</p>
+
+    <p>In 2021, Hormozi sold several of his companies and shifted his focus toward investing in other founders through Acquisition.com. He frequently shares in-depth, transparent insights into his journey via social media and YouTube, where his following has rapidly grown. His no-fluff style and generous value delivery have earned him respect in the entrepreneurial space.</p>
+
+    <p>Hormozi is also the author of several best-selling business books, including "$100M Offers" and "$100M Leads," which have been widely adopted by business owners worldwide. These books focus on creating irresistible offers and generating massive demand, respectively.</p>
+
+    <p>Unlike many business influencers, Hormozi is known for his data-driven approach and focus on discipline, not hype. He avoids flashy lifestyles and instead champions efficiency, long-term thinking, and high-leverage actions. His wife, Leila Hormozi, is also a key business partner in their ventures.</p>
+
+    <p>Alex continues to invest in entrepreneurs aiming to scale their businesses from 3 to 50 million dollars in revenue. His impact is especially felt among young business builders, who often regard him as a modern-day strategist in the online and offline business worlds.</p>
+
+    <p>For more, visit <a href="https://www.acquisition.com/" target="_blank">acquisition.com</a> or check his educational content on <a href="https://www.youtube.com/c/AlexHormozi" target="_blank">YouTube</a>.</p>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      document.documentElement.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+    }
+  </script>
+</body>
+</html>
